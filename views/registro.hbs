@@ -1,0 +1,37 @@
+<div class="container-fluid bg-dark m-0">
+     <div class="row justify-content-center align-items-center" style="height : 76vh">
+        <div class="col-4 text-light">
+            <form method="post" action="/registro">
+                 <div class="form-group">
+                    <label for="username">Nombre:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de usuario">
+                </div>
+                <div class="form-group">
+                    <label for="mail">Mail<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="mail" placeholder="Mail">
+                </div>
+                <div class="form-group row">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <label for="inputPassword6" class="col-form-label">Contrasena<span class="text-danger">*</span></label>
+                            <input type="password" name="pass" class="form-control" placeholder="Contrasena">
+                            <span id="passwordHelpInline" class="form-text">
+                            la contrasena debe tener de 6-8 caracteres.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+               <div class="form-group">
+                    <label for="telefone">Telefono<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-info mt-3">Registrate</button>
+                </div>
+            </form>
+            <p class="text-danger text-center mt-3">{{message}}</p>
+        </div>
+    </div>
+</div> 
+
+

@@ -1,0 +1,24 @@
+<div class="container-fluid  bg-dark" style="height : 71vh">
+    <div class="container mt-5">
+        <a href="/admin/categorias/create" class="btn btn-info mt-4 mb-4">Agregar Categoria</a>
+        <table class="table text-white">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+            {{#each categorias}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{nombre}}</td>
+                <td>{{descripcion}}</td>
+                <td><a href="/admin/categorias/update/{{id}}" class="btn btn-primary"> Editar<i class="fas fa-edit"></i></a></td>
+                <td><a href="/admin/categorias/delete/{{id}}" class="btn btn-danger">Eliminar<i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+            {{/each}}
+        </table>
+
+    </div>
+</div>

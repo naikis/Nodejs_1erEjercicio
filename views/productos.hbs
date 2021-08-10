@@ -1,0 +1,32 @@
+<div class="container-fluid bg-dark" style= "height : 79vh">
+        <div class="row">
+            <div class="col-3">
+                <form action="/productos" method="post">
+                    <div class="form-group mt-3">
+                        <input type="text" name="aBuscar" placeholder="Ingrese un producto a buscar"
+                            class="form-control">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary mt-3">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+<div class="row justify-content-center align-items-center mt-5">
+        {{#each productos}}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre: {{nombre}}</h5>
+                    <p class="card-text">Descripcion: {{descripcion}}</p>
+                    <p class="card-text">Precio: {{precio}}</p>
+                    <p class="card-text">Stock: {{stock}}</p>
+                    <p class="card-text">Categoria: {{nombreCategoria}}</p>
+                    <a href="/productos/single/{{id}}" class="btn btn-primary">ver mas</a>
+                    <a href="/productos/buy/{{id}}" class="btn btn-success">COMPRAR<i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+         {{/each}}
+    </div>
+</div>

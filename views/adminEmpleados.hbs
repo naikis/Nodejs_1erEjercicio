@@ -1,0 +1,22 @@
+<div class="container-fluid bg-dark" style= "height : 79vh">   
+        <div class="col">
+            <a href="/admin/empleados/create" class="btn btn-info mt-4 mb-4">Agregar Empleados</a>
+        </div>
+    <div class="row align-items-center">
+        {{#each empleados}}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/images/{{uuid}}" alt="no hay imagen" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre: {{nombre}}</h5>
+                    <p class="card-text">Apellido: {{apellido}}</p>
+                    <p class="card-text">Telefono: {{telefono}}</p>
+                    <p class="card-text">Direccion: {{direccion}}</p>
+                    <a href="/admin/empleados/update/{{id}}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                    <a href="/admin/empleados/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</a>
+                </div>
+            </div>
+        </div>
+         {{/each}}
+    </div>
+</div>
