@@ -34,7 +34,7 @@ const create = async (req, res) => {
             mail : usuarioFinal.mail, 
             cuerpo:
             `<h1> Bienvenido ${usuarioFinal.username}</h1>
-            <a href="${process.env.URL_SERVER}:${process.env.PORT}/registro/verify/${usuarioFinal.confirmacionCorreo}">Link magico</a>`,
+            <a href="${process.env.URL_SERVER}:${process.env.PORT}/registro/verify/${usuarioFinal.confirmacionCorreo}">Seleccione aqui para confirmar su mail</a>`,
             });
         res.redirect('/productos');
     }
